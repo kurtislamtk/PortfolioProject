@@ -15,6 +15,8 @@ WHERE product_cat_name IS NULL
 DELETE FROM orders
 WHERE order_status = 'unavailable' OR order_status = 'canceled'
 
+
+--Data cleaning (delete orders in 2016 and 2018)
 DELETE FROM orders
 WHERE EXTRACT(YEAR FROM order_purchase_timestamp) = '2016' OR EXTRACT(YEAR FROM order_purchase_timestamp) = '2018'
 
