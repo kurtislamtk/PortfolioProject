@@ -21,7 +21,7 @@ DELETE FROM orders
 WHERE EXTRACT(YEAR FROM order_purchase_timestamp) = '2016' OR EXTRACT(YEAR FROM order_purchase_timestamp) = '2018'
 
 
---Data cleaning (insert column 'purchase month'(YYYY-MM) for future use)
+--Data cleaning (insert column 'purchase month'(YYYY-MM) for future data exploration and filter use)
 ALTER TABLE orders
 ADD COLUMN order_purchase_month TYPE DATE
 
